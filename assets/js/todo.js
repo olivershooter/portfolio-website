@@ -31,14 +31,14 @@ function addTodo(event) {
 
     //CHECK MARK BUTTON
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = '<i class="todo-fas fa-check"></i>';
-    completedButton.classList.add("todo-complete-btn");
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
 
     //CHECK trash BUTTON
     const trashButton = document.createElement("button")
-    trashButton.innerHTML = '<i class="todo-fas fa-trash"></i>';
-    trashButton.classList.add("todo-trash-btn");
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
     //APPEND TO LIST
@@ -52,7 +52,7 @@ function deleteCheck(e) {
     const item = e.target;
 
     //DELETE TODO
-    if (item.classList[0] === "todo-trash-btn") {
+    if (item.classList[0] === "trash-btn") {
         const todo = item.parentElement;
 
         //Animation
@@ -64,7 +64,7 @@ function deleteCheck(e) {
     }
 
     //Check Mark
-    if (item.classList[0] === "todo-complete-btn") {
+    if (item.classList[0] === "complete-btn") {
         const todo = item.parentElement;
         todo.classList.toggle("completed");
     }
@@ -134,14 +134,14 @@ function getTodos() {
 
         //CHECK MARK BUTTON
         const completedButton = document.createElement("button");
-        completedButton.innerHTML = '<i class="todo-fas fa-check"></i>';
-        completedButton.classList.add("todo-complete-btn");
+        completedButton.innerHTML = '<i class="fas fa-check"></i>';
+        completedButton.classList.add("complete-btn");
         todoDiv.appendChild(completedButton);
 
         //CHECK trash BUTTON
         const trashButton = document.createElement("button")
-        trashButton.innerHTML = '<i class="todo-fas fa-trash"></i>';
-        trashButton.classList.add("todo-trash-btn");
+        trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+        trashButton.classList.add("trash-btn");
         todoDiv.appendChild(trashButton);
 
         //APPEND TO LIST
